@@ -16,10 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className={`${roboto.className} mx-auto max-w-2xl px-6 text-justify`}>
-          {children}
-        </div>
+      <body className={`${roboto.className}`}>
+        {children}
       </body>
     </html>
   )

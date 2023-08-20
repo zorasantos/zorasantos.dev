@@ -2,13 +2,6 @@ import { notFound } from "next/navigation";
 import { getPostContent, getPostMetadata } from "@/utils";
 import Markdown from "markdown-to-jsx";
 
-type Post = {
-  id: number,
-  title: string,
-  content: string,
-  slug: string
-}
-
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
 
@@ -17,7 +10,7 @@ export const generateStaticParams = async () => {
   }));
 }
 
-export default async function Post(params: any) {
+export default async function Post(params: { params: { slug: string } }) {
   const { slug } = params?.params
   const post = getPostContent(slug)
 
@@ -26,7 +19,7 @@ export default async function Post(params: any) {
   }
 
   return (
-    <article className="prose text-lg">
+    <article className="prose text-lg mx-auto max-w-4xl px-6 text-justify">
       <Markdown>{post.content}</Markdown>
     </article>
   )
