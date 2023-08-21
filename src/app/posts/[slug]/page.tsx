@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getPostContent, getPostMetadata } from "@/utils";
 import Markdown from "markdown-to-jsx";
+import { Breadcrumbs } from "@/components";
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -19,8 +20,11 @@ export default async function Post(params: { params: { slug: string } }) {
   }
 
   return (
-    <article className="prose text-lg mx-auto max-w-6xl md:max-w-full text-justify">
-      <Markdown>{post.content}</Markdown>
-    </article>
+    <>
+      <Breadcrumbs page="Blog" title={post?.data?.title} />
+      <article className="prose text-lg mx-auto max-w-6xl md:max-w-full text-justify">
+        <Markdown>{post.content}</Markdown>
+      </article>
+    </>
   )
 }

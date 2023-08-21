@@ -26,7 +26,7 @@ Qual a utilidade de cada pacote:
 
 **@types/node**: biblioteca que fornece definições de tipos (TypeScript) para os módulos nativos do Node.js. Ela é usada em projetos TypeScript quando se deseja obter suporte para a verificação de tipos.
 
-**tsx**: biblioteca utilizada para executar arquivos TypeScript (com extensão .ts) diretamente no Node.js, sem a necessidade de compilar previamente os arquivos para JavaScript (extensão .js). O pacote tsx foi aprimorado com *esbuild* para executar arquivos TypeScript e ESM.
+**tsx**: biblioteca utilizada para executar arquivos TypeScript (com extensão.ts) diretamente no Node.js, sem a necessidade de compilar previamente os arquivos para JavaScript (extensão.js). O pacote tsx foi aprimorado com *esbuild* para executar arquivos TypeScript e ESM.
 
 **tsup**: é uma ferramenta de empacotamento (bundling) e compilação para projetos TypeScript. Ela facilita a criação de pacotes JavaScript a partir do código TypeScript e é uma alternativa mais simples e minimalista comparada a ferramentas mais complexas de empacotamento, como o Webpack e Rollup.
 

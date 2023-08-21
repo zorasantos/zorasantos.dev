@@ -9,6 +9,7 @@ export default function Home() {
       <PostCard {...post} />
     </Link>
   ));
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div>
   )

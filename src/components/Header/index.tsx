@@ -9,9 +9,9 @@ export default function Header() {
       <Image alt="logo" src={Logo} className="w-20 h-16" />
     </Link>
     <nav className="flex gap-5">
-      <a href="" className="text-[#3A3748] font-semibold cursor-pointer">Sobre Min</a>
-      <a href="" className="text-[#3A3748] font-semibold cursor-pointer">Portfólio</a>
-      <a href="" className="text-[#3A3748] font-semibold cursor-pointer">Contato</a>
+      <a href="" className="text-gray-700 font-semibold cursor-pointer">Sobre Min</a>
+      <a href="" className="text-gray-700 font-semibold cursor-pointer">Portfólio</a>
+      <a href="" className="text-gray-700 font-semibold cursor-pointer">Contato</a>
     </nav>
   </header>
   )
