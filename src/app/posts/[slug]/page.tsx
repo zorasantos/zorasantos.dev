@@ -19,7 +19,7 @@ export default async function Post(params: { params: { slug: string } }) {
   }
 
   return (
-    <article className="prose text-lg mx-auto max-w-4xl px-6 text-justify">
+    <article className="prose text-lg mx-auto max-w-6xl text-justify">
       <Markdown>{post.content}</Markdown>
     </article>
   )
