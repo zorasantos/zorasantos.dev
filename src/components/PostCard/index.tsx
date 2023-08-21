@@ -1,5 +1,6 @@
 import Image from "next/image";
 import arrow_forward from "../../../public/arrow_forward.svg"
+import photo_author from "../../../public/perfil.jpeg"
 
 interface PostCardProps {
   title: string;
@@ -11,7 +12,10 @@ interface PostCardProps {
 export default function PostCard(props: PostCardProps) {
   return (
     <div className="flex flex-col justify-between gap-5 p-5 min-h-[316px] bg-white shadow-lg rounded-lg hover:bg-gray-100 hover:scale-105">
-      <span className="text-gray-700">{props.date}</span>
+      <div  className="flex items-center gap-3 text-gray-700">
+        <Image alt="photo author" width={30} src={photo_author} className="h-auto max-w-full rounded-full" />
+        <span>{props.date}</span>
+      </div>
       <h3 className="text-[#556AF3] text-2xl font-bold">{props.title}</h3>
       <p className="text-gray-700 font-thin line-clamp-2">{props.description}</p>
       <div>

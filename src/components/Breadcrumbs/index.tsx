@@ -14,11 +14,11 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
     <ol className="list-reset flex items-center">
       <li>
         <Link href="/">
-          <Image alt="icon home" width={25} src={home_icon} />
+          <Image alt="icon home" src={home_icon} className="w-10 sm:w-7" />
         </Link>
       </li>
       <li>
-        <Image alt="icon chevron right" width={23} src={chevron_right} />
+        <Image alt="icon chevron right" src={chevron_right} className="w-12 sm:w-8" />
       </li>
       <li>
         <Link
@@ -27,9 +27,9 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
           >{page}</Link>
       </li>
       <li>
-        <Image alt="icon chevron right" width={23} src={chevron_right} />
+        <Image alt="icon chevron right" src={chevron_right} className="w-12 sm:w-8" />
       </li>
-      <li className="text-gray-700 font-thin text-[13px]">{title}</li>
+      <li className="text-gray-700 font-thin text-[13px] line-clamp-2">{title}</li>
     </ol>
   </nav>
   )
