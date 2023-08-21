@@ -7,7 +7,7 @@ interface PostCardProps {
 }
 export default function PostCard(props: PostCardProps) {
   return (
-    <div className="flex flex-col gap-5 bg-white shadow-lg rounded-lg p-5">
+    <div className="flex flex-col gap-5 p-5 bg-white shadow-lg rounded-lg hover:bg-gray-100 hover:scale-105">
       <span className="text-[#4A5568]">{props.date}</span>
       <h3 className="text-[#556AF3] text-2xl font-bold">{props.title}</h3>
       <p className="text-[#4A5568] line-clamp-2">{props.description}</p>
