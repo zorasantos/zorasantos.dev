@@ -1,3 +1,6 @@
+import Image from "next/image";
+import arrow_forward from "../../../public/arrow_forward.svg"
+
 interface PostCardProps {
   title: string;
   date: string;
@@ -15,6 +18,10 @@ export default function PostCard(props: PostCardProps) {
         {props.tags.map((tag, index) => (
           <p key={tag + index} className="inline-block bg-gray-200 rounded-full px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</p>
         ))}
+      </div>
+      <div className="flex gap-2">
+        <Image alt="icon arrow forward" src={arrow_forward} className="w-6" />
+        <span className="text-[#3A3748] font-semibold">Ler Mais</span>
       </div>
     </div>
   )
