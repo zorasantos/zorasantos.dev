@@ -17,12 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className={`${roboto.className} min-h-screen px-10 md:px-24`}>
-          <Header />
-          {children}
-          <Footer />
-        </div>
+      <body className={`${roboto.className} min-h-screen px-10 md:px-24`}>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   )
