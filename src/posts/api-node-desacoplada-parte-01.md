@@ -38,24 +38,24 @@ Qual a utilidade de cada pacote:
 1. Crie na raiz do projeto um arquivo **tsconfig.json**
 2. Adicione ao arquivo o seguinte código:
 
-```js
-{
-  "compilerOptions": {
-    "target": "es2017",
-    "strictNullChecks": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "baseUrl": "./src",
-    "rootDir": "./",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "strict": true,
+<Code language="json">
+  {
+    "compilerOptions": {
+      "target": "es2017",
+      "strictNullChecks": true,
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "baseUrl": "./src",
+      "rootDir": "./",
+      "outDir": "./dist",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true,
+      "strict": true,
+    }
   }
-}
-```
+</Code>
 
 Crie na raiz do projeto o arquivo **.gitignore** com o seguinte conteúdo:
 

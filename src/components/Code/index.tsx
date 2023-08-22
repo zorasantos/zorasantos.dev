@@ -1,28 +1,15 @@
-export default function Code() {}
-// import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+"use client"
 
-// interface CodeInputProps {
-//   code: string;
-//   language: string;
-// }
+import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
+import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-// export const Code: React.FC<CodeInputProps> = (props) => {
-//   const { code, language } = props;
-//   return (
-//     <SyntaxHighlighter language={language} style={materialDark}>
-//       {code}
-//     </SyntaxHighlighter>
-//   );
-// };
-
-// export default function Code({ children, language }: any) {
-//   return (
-//     <SyntaxHighlighter
-//       language={language}
-//       style={materialDark}
-//     >
-//       {children}
-//     </SyntaxHighlighter>
-//   )
-// }
+export default function Code({ children, language }: any) {
+  return (
+    <SyntaxHighlighter
+      language={language}
+      style={materialDark}
+    >
+      {children}
+    </SyntaxHighlighter>
+  )
+}

@@ -10,7 +10,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
   return (
-    <nav className="w-full rounded-md">
+    <nav className="w-full rounded-md" aria-label="Breadcrumb">
     <ol className="list-reset flex items-center">
       <li>
         <Link href="/">

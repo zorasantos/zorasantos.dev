@@ -20,7 +20,7 @@ export default function PostCard(props: PostCardProps) {
       <p className="text-gray-700 font-thin line-clamp-2">{props.description}</p>
       <div>
         {props.tags.map((tag, index) => (
-          <p key={tag + index} className="inline-block bg-gray-200 rounded-full px-2 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{tag}</p>
+          <p key={tag + index} className="inline-block bg-gray-200 rounded-full px-2 py-1 text-sm text-gray-600 mr-2 mb-2">{tag}</p>
         ))}
       </div>
       <div className="flex gap-2">
