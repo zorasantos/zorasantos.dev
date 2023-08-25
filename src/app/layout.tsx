@@ -19,9 +19,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* <title>Zoranildo Santos</title>
-        <meta name='title' content='Zoranildo Santos'/>
-        <meta name='description' content='Site pessoal do engenheiro de software Zoranildo Santos' /> */}
         <Script
           id='gtm'
           dangerouslySetInnerHTML={{

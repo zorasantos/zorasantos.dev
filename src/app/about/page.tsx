@@ -1,3 +1,10 @@
+import { Metadata } from "next/types"
+
+export const metadata: Metadata = {
+  title: 'Sobre Mim',
+  description: 'Breves palavras sobre eu',
+}
+
 export default function About() {
   return (
     <>
