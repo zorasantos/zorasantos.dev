@@ -1,10 +1,8 @@
 import { notFound } from "next/navigation";
-import { getPostContent, getPostMetadata } from "@/utils";
+import { getPostContent, getPostMetadata, artigo1, artigo2, scrollToTop } from "@/utils";
 import Markdown from "markdown-to-jsx";
 import { Breadcrumbs, Code, PostDetails } from "@/components";
-import { artigo1, artigo2 } from "@/utils/headings";
 import Link from "next/link";
-import { scrollToTop } from "@/utils/scrollToTop";
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -26,12 +24,6 @@ export default async function Post(params: { params: { slug: string } }) {
 
   return (
     <div className="grid grid-cols-12">
-      {/* <Head>
-        <title>{post?.data?.title}</title>
-        <meta name='title' content={`Post - ${post?.data?.title}`}/>
-        <meta name='description' content={post?.data?.description} />
-        <meta property="og:title" content="My page title" key="title" />
-      </Head> */}
       <div className="col-span-full md:col-span-8 row-span-full">
         <Breadcrumbs page="Blog" title={post?.data?.title} />
         <PostDetails author={post?.data?.author} date={post?.data?.date} description={post?.data?.description} title={post?.data?.title}/>
