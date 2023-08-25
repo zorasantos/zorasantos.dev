@@ -1,6 +1,6 @@
 import Image from "next/image";
-import arrow_forward from "../../../public/arrow_forward.svg"
-import photo_author from "../../../public/perfil.jpeg"
+import arrow_forward from "@/assets/arrow_forward.svg"
+import photo_author from "@/assets/perfil.jpeg"
 
 interface PostCardProps {
   title: string;

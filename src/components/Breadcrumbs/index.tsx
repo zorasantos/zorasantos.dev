@@ -1,7 +1,8 @@
 import Link from "next/link";
-import chevron_right from "../../../public/chevron_right.svg"
-import home_icon from "../../../public/home.svg"
 import Image from "next/image";
+
+import chevron_right from "@/assets/chevron_right.svg"
+import home_icon from "@/assets/home.svg"
 
 interface BreadcrumbsProps {
   title: string;

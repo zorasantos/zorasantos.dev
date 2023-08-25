@@ -1,5 +1,5 @@
 import Image from "next/image";
-import photo_author from "../../../public/perfil.jpeg"
+import photo_author from "@/assets/perfil.jpeg"
 
 interface PostDetailsProps {
   author: string;
