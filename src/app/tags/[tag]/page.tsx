@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { PostCard } from "@/components";
 import { getPostMetadata } from "@/utils";
+import { GetServerSideProps } from "next";
+import { ParsedUrlQuery } from "node:querystring";
 
-export async function getServerSideProps(context: any) {
+interface ITagProps extends ParsedUrlQuery {
+  tag: string;
+}
+
+const getServerSideProps: GetServerSideProps = async (context) => {
   const { params } = context;
-  const { tag } = params;
+  const { tag } = params as ITagProps;
 
   return {
     props: {

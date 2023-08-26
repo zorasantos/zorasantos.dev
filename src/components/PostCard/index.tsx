@@ -1,7 +1,6 @@
 import Image from "next/image";
 import arrow_forward from "@/assets/arrow_forward.svg"
 import photo_author from "@/assets/perfil.jpeg"
-import { Tags } from "..";
 
 interface PostCardProps {
   title: string;
@@ -19,7 +18,11 @@ export default function PostCard(props: PostCardProps) {
       </div>
       <h3 className="text-[#556AF3] text-2xl font-bold">{props.title}</h3>
       <p className="text-gray-700 font-thin line-clamp-2">{props.description}</p>
-      <Tags tags={props?.tags} />
+      <div>
+        {props.tags.map((tag, index) => (
+          <p key={tag + index} className="inline-block bg-gray-200 rounded-full px-2 py-1 text-sm text-gray-600 mr-2 mb-2">{tag}</p>
+        ))}
+      </div>
       <div className="flex gap-2">
         <Image alt="icon arrow forward" src={arrow_forward} className="w-6" />
         <span className="text-gray-700 font-semibold">Ler Mais</span>
