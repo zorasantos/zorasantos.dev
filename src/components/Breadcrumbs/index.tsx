@@ -24,7 +24,7 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
       <li>
         <Link
           href="/"
-          className="text-[#556AF3] hover:text-[#1CDAFF]"
+          className="text-[#556AF3] hover:text-[#85F3E2]"
           >{page}</Link>
       </li>
       <li>

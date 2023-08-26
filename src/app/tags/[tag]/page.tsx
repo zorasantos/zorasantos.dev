@@ -1,16 +1,28 @@
+import Link from "next/link";
 import { PostCard } from "@/components";
 import { getPostMetadata } from "@/utils";
-import Link from "next/link";
 
-export default function Tag(tag: string) {
+export async function getServerSideProps(context: any) {
+  const { params } = context;
+  const { tag } = params;
+
+  return {
+    props: {
+      tag,
+    },
+  };
+}
+
+export default function TagPage(params: { params: { tag: string } }) {
+
+  const { tag } = params?.params
 
   const posts = getPostMetadata();
-
-  // remover essa função para a pasta utils
 
   const filterPostsByTag = (tag: string) => {
     return posts.filter((post) => post.tags.includes(tag));
   }
+
   const result = filterPostsByTag(tag)
 
   const postPreviews = result?.map((post) => (

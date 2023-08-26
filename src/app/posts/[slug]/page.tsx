@@ -48,9 +48,7 @@ export default async function Post(params: { params: { slug: string } }) {
         </div>
         <div className="flex flex-col gap-4">
           <span className="text-[#556AF3] text-xl">Tags</span>
-          <Link href="/tags/css">
-            <Tags tags={tags || []} className="cursor-pointer hover:text-[#1CDAFF]" />
-          </Link>
+          <Tags tags={tags || []} />
         </div>
       </div>
     </div>

@@ -11,9 +11,9 @@ export default function Header() {
       <Image priority alt="logo" src={Logo} className="w-20 h-16" />
     </Link>
     <nav className="flex gap-5">
-      <Link href="/about" className="text-gray-700 font-semibold cursor-pointer hover:text-[#1CDAFF]">Sobre Min</Link>
-      <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#1CDAFF]">Portfólio</a>
-      <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#1CDAFF]">Contato</a>
+      <Link href="/about" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Sobre Min</Link>
+      <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Portfólio</a>
+      <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Contato</a>
     </nav>
   </header>
   )
