@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import { getPostContent, getPostMetadata, getHeadings, scrollToTop } from "@/utils";
-import Markdown from "markdown-to-jsx";
-import { Breadcrumbs, Code, PostDetails } from "@/components";
 import Link from "next/link";
+import Markdown from "markdown-to-jsx";
+import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost } from "@/utils";
+import { Breadcrumbs, Code, PostDetails, Tags } from "@/components";
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -14,9 +14,10 @@ export const generateStaticParams = async () => {
 
 export default async function Post(params: { params: { slug: string } }) {
   const { slug } = params?.params
-  const post = getPostContent(slug)
 
+  const post = getPostContent(slug)
   const headings = getHeadings(slug)
+  const tags = getTagsByPost(slug)
 
   if(!post) {
     return notFound()
@@ -44,6 +45,12 @@ export default async function Post(params: { params: { slug: string } }) {
           {headings?.map(item => (
             <Link className="flex flex-col text-lg mb-2 hover:text-[#556AF3]" key={item.id} href={`#${item.id}`}>{item.title}</Link>
           ))}
+        </div>
+        <div className="flex flex-col gap-4">
+          <span className="text-[#556AF3] text-xl">Tags</span>
+          <Link href="/tags/css">
+            <Tags tags={tags || []} className="cursor-pointer hover:text-[#1CDAFF]" />
+          </Link>
         </div>
       </div>
     </div>
