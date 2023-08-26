@@ -6,6 +6,8 @@ export default function Tag(tag: string) {
 
   const posts = getPostMetadata();
 
+  // remover essa função para a pasta utils
+
   const filterPostsByTag = (tag: string) => {
     return posts.filter((post) => post.tags.includes(tag));
   }

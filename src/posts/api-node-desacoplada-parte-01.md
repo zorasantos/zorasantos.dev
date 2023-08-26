@@ -2,7 +2,7 @@
 author: "Zoranildo Santos"
 title: "Guia Prático: Aprenda a Construir uma API Node.js Desacoplada"
 description: "O intuito dessa série de artigos é mostrar na prática como criar e estruturar inicialmente uma aplicação Node.js"
-date: "26/07/2023"
+publishedAt: "26/07/2023"
 tags: ["node", "cleancode", "typescript", "api"]
 ---
 

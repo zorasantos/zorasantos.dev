@@ -3,7 +3,7 @@ import matter from "gray-matter";
 
 interface PostMetadata {
   title: string;
-  date: string;
+  publishedAt: string;
   description: string;
   tags: string[];
   slug: string;
@@ -20,7 +20,7 @@ export const getPostMetadata = (): PostMetadata[] => {
     const matterResult = matter(fileContents);
     return {
       title: matterResult.data.title,
-      date: matterResult.data.date,
+      publishedAt: matterResult.data.publishedAt,
       description: matterResult.data.description,
       tags: matterResult.data.tags,
       slug: fileName.replace(".md", ""),

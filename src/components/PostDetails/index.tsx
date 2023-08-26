@@ -5,10 +5,10 @@ interface PostDetailsProps {
   author: string;
   title: string;
   description: string;
-  date: string;
+  publishedAt: string;
 }
 
-export default function PostDetails({ author, date, description, title }: PostDetailsProps) {
+export default function PostDetails({ author, publishedAt, description, title }: PostDetailsProps) {
   return (
   <div className="flex flex-col justify-between gap-6 mt-10 mb-14 min-h-[216px]">
     <h1 className="text-[#556AF3] text-4xl font-bold">{title}</h1>
@@ -18,7 +18,7 @@ export default function PostDetails({ author, date, description, title }: PostDe
         <Image alt="photo author" width={40} src={photo_author} className="h-auto max-w-full rounded-full" />
         <span>{author}</span>
       </div>
-      <span>{date}</span>
+      <span>{publishedAt}</span>
     </div>
   </div>
   )

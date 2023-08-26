@@ -1,53 +1,53 @@
 ---
 author: "Zoranildo Santos"
 title: "Aprenda a Criar um Bouncy Loading Animation Apenas com CSS"
-description: "O intuito do artigo não é apenas mostrar como podemos criar um loading bouncy apenas usando css, mas também explicar o que cada propriedade css faz para que ao fim tenhamos um bouncy loading animation."
-date: "19/07/2023"
+description: "Vamos entender o passo-a-passo e cada propriedade css necessária pra criar um bouncy loading animation."
+publishedAt: "19/07/2023"
 tags: ["css", "html"]
 ---
 
 O intuito do artigo não é apenas mostrar como podemos criar um loading bouncy apenas usando css, mas também explicar o que cada propriedade css faz para que ao fim tenhamos um bouncy loading animation.
 
-```css
-.loader {
-  display: inline-block;
-}
-```
+<Code language="css">
+  .loader {
+    display: inline-block;
+  }
+</Code>
 
 **.loader**: É uma classe que define um elemento como um bloco em linha (inline-block). No contexto dessa animação, ele deve ser aplicado a um elemento que contém os elementos com a classe .loader-ball.
 
-```css
-.loader-ball {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #ffff;
-  margin-inline: 5px;
-  border-radius: 50%;
-  animation: bounce 450ms alternate infinite;
-}
-```
+<Code language="css">
+  .loader-ball {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffff;
+    margin-inline: 5px;
+    border-radius: 50%;
+    animation: bounce 450ms alternate infinite;
+  }
+</Code>
 
 **.loader-ball**: É uma classe que define os elementos que formam as bolas animadas. Cada bola é um círculo com 20px de largura e altura (width: 20px; height: 20px;) e tem a cor de fundo branca (background-color: #ffff;).
 
 As bolas têm um espaçamento horizontal entre elas de 5px (margin-inline: 5px) e têm o formato de um círculo perfeito devido ao border-radius: 50%. Além disso, a animação de "bounce" é aplicada a essas bolas, com duração de 450ms, alternando entre o estado inicial e final de forma infinita (animation: bounce 450ms alternate infinite).
 
-```css
-.loader-ball:nth-child(1) {
-  background-color: blue;
-  animation-delay: 75ms;
-}
+<Code language="css">
+  .loader-ball:nth-child(1) {
+    background-color: blue;
+    animation-delay: 75ms;
+  }
 
-.loader-ball:nth-child(2) {
-  background-color: yellow;
-  animation-delay: 150ms;
-}
+  .loader-ball:nth-child(2) {
+    background-color: yellow;
+    animation-delay: 150ms;
+  }
 
-.loader-ball:nth-child(3) {
-  background-color: green;
-  animation-delay: 300ms;
-}
-```
+  .loader-ball:nth-child(3) {
+    background-color: green;
+    animation-delay: 300ms;
+  }
+</Code>
 
 **.loader-ball:nth-child(1), .loader-ball:nth-child(2), .loader-ball:nth-child(3)**: Essas são regras adicionais que especificam o estilo de cada bola individualmente.
 
@@ -61,44 +61,44 @@ Durante a animação, a bola é escalada horizontalmente para 1.25 vezes o seu t
 
 ## Código css completo:
 
-```css
-.loader {
-  display: inline-block;
-}
-.loader-ball {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: #ffff;
-  margin-inline: 5px;
-  border-radius: 50%;
-  animation: bounce 450ms alternate infinite;
-}
-
-.loader-ball:nth-child(1) {
-  background-color: blue;
-  animation-delay: 75ms;
-}
-
-.loader-ball:nth-child(2) {
-  background-color: yellow;
-  animation-delay: 150ms;
-}
-
-.loader-ball:nth-child(3) {
-  background-color: green;
-  animation-delay: 300ms;
-}
-
-@keyframes bounce {
-  from {
-    transform: scaleX(1.25);
+<Code language="css">
+  .loader {
+    display: inline-block;
   }
-  to {
-    transform: translateY(-50px) scaleX(1);
+  .loader-ball {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #ffff;
+    margin-inline: 5px;
+    border-radius: 50%;
+    animation: bounce 450ms alternate infinite;
   }
-}
-```
+
+  .loader-ball:nth-child(1) {
+    background-color: blue;
+    animation-delay: 75ms;
+  }
+
+  .loader-ball:nth-child(2) {
+    background-color: yellow;
+    animation-delay: 150ms;
+  }
+
+  .loader-ball:nth-child(3) {
+    background-color: green;
+    animation-delay: 300ms;
+  }
+
+  @keyframes bounce {
+    from {
+      transform: scaleX(1.25);
+    }
+    to {
+      transform: translateY(-50px) scaleX(1);
+    }
+  }
+</Code>
 
 ```html
 <!DOCTYPE html>
@@ -121,6 +121,4 @@ Durante a animação, a bola é escalada horizontalmente para 1.25 vezes o seu t
 </html>
 ```
 
-**Configurar External link**
-
-Caso queira ver o código funcionando acesse o [link codesandbox](https://codesandbox.io/embed/bouncy-loading-mdqjpm?fontsize=14&hidenavigation=1&theme=dark/)
+Confira o código funcionando, acesse o <a href="https://codesandbox.io/embed/bouncy-loading-mdqjpm?fontsize=14&hidenavigation=1&theme=dark" target="_blank">link codesandbox</a>

@@ -2,7 +2,7 @@
 author: "Zoranildo Santos"
 title: "API Node Desacoplada: Criando servers com express e fastify"
 description: "Explorando a Criação de Servidores Desacoplados com Express e Fastify em APIs Node"
-date: "26/07/2023"
+publishedAt: "26/07/2023"
 tags: ["node", "cleancode", "typescript", "api"]
 ---
 
