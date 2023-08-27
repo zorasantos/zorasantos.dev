@@ -1,22 +1,24 @@
 import Link from "next/link";
 import { PostCard } from "@/components";
 import { getPostMetadata } from "@/utils";
-import { GetServerSideProps } from "next";
-import { ParsedUrlQuery } from "node:querystring";
 
-interface ITagProps extends ParsedUrlQuery {
-  tag: string;
-}
+export const generateStaticParams = async () => {
+  const posts = getPostMetadata();
 
-const getServerSideProps: GetServerSideProps = async (context) => {
-  const { params } = context;
-  const { tag } = params as ITagProps;
+  const tags = posts.map(item => item.tags).map(item => item);
 
-  return {
-    props: {
-      tag,
-    },
-  };
+  const uniqueTags = tags.reduce((acc, tags) => {
+    tags.forEach(tag => {
+      if (!acc.includes(tag)) {
+        acc.push(tag);
+      }
+    });
+    return acc;
+  }, []);
+
+  return uniqueTags.map(tag => ({
+    tag,
+  }));
 }
 
 export default function TagPage(params: { params: { tag: string } }) {
