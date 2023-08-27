@@ -14,14 +14,15 @@ Nesse primeiro artigo vamos iniciar o projeto e configurar o typescript.
 
 Vamos iniciar o projeto usando o comando abaixo que irá gerar o arquivo `package.json`. Em qual local vai ficar o projeto na sua máquina é de sua escolha.
 
-```bash
-yarn init -y
-```
+<Code language="bash">
+  yarn init -y
+</Code>
+
 ## Instalando devDependencies:
 
-```bash
-yarn add @types/node tsup tsx typescript -D
-```
+<Code language="bash">
+  yarn add @types/node tsup tsx typescript -D
+</Code>
 
 Qual a utilidade de cada pacote:
 
@@ -59,9 +60,9 @@ Qual a utilidade de cada pacote:
 
 Crie na raiz do projeto o arquivo **.gitignore** com o seguinte conteúdo:
 
-```
-node_modules/
-```
+<Code language="bash">
+  node_modules/
+</Code>
 
 No final desse primeiro artigo o projeto deverá ter a estrutura abaixo:
 

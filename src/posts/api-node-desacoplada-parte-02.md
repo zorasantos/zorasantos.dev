@@ -14,15 +14,16 @@ Para dar continuidade ao projeto, vamos criar uma pasta src na raiz do projeto e
 
 Antes de seguir vamos instalar algumas bibliotecas como dependencies:
 
-```bash
-yarn add dotenv express fastify
-```
+<Code language="bash">
+  yarn add dotenv express fastify
+</Code>
 
 e outra como devDependencies
 
-```bash
-yarn add @types/express -D
-```
+<Code language="bash">
+  yarn add @types/express -D
+</Code>
+
 **dotenv**: pacote utilizado em projetos Node.js para carregar variáveis de ambiente de arquivos .env. Ele é especialmente útil para gerenciar configurações sensíveis e variáveis que podem variar de ambiente para ambiente (por exemplo, desenvolvimento, teste e produção) sem a necessidade de codificar essas informações diretamente no código.
 
 **express**: framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos.
