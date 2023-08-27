@@ -7,7 +7,7 @@ import { Breadcrumbs, Code, PostDetails, Tags } from "@/components";
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
 
-  return posts?.map((post: { slug: any; }) => ({
+  return posts?.map((post: { slug: string; }) => ({
     slug: post?.slug,
   }));
 }
