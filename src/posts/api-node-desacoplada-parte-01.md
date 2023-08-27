@@ -66,6 +66,6 @@ Crie na raiz do projeto o arquivo **.gitignore** com o seguinte conteúdo:
 
 No final desse primeiro artigo o projeto deverá ter a estrutura abaixo:
 
-![imagem da estrutura de pastas](https://res.cloudinary.com/practicaldev/image/fetch/s--1SVKX_OW--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qygsn5m5p0tv0488qx31.png)
+![imagem da estrutura de pastas](https://res.cloudinary.com/doampncx5/image/upload/v1693131386/Screenshot_2023-07-25_201422.png)
 
 Nesse artigo ficamos por aqui. No próximo artigo vamos codar dois server um com fastify e outro com express e alternar entre um e outro mudando apenas uma variável de ambiente.

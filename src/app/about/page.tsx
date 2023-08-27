@@ -15,7 +15,7 @@ export default function About() {
       <div className="flex flex-col gap-5 text-justify text-lg text-[#2D3748]">
         <p>
           Olá! me chamo <strong>Zoranildo Santos</strong>, um apaixonado por desenvolvimento de software, com uma ampla experiência
-          tanto em frontend quanto em backend. Com anos de prática no desenvolvimento de aplicativos web, adquiri habilidades sólidas
+          como Full Stack Developer. Com anos de prática no desenvolvimento de aplicativos web, adquiri habilidades sólidas
           em tecnologias e frameworks modernos como JavaScript, Typescript, Banco de dado SQL e noSQL, NodeJS, ReactJS, VueJS, AWS, Docker entre outras.
         </p>
         <p>

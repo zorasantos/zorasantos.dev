@@ -10,7 +10,7 @@ Neste artigo vamos criar os dois servidores, um com express e outro com fastify 
 
 Para dar continuidade ao projeto, vamos criar uma pasta src na raiz do projeto e outra pasta chamada infra dentro de src. Dentro de infra vamos criar uma pasta ports e dentro de ports mais duas pasta express e fastify. A estrutura de pastas devera ficar como o exemplo abaixo:
 
-![estrutura de pastas](https://res.cloudinary.com/practicaldev/image/fetch/s--5aaUx3mn--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/syd2cbypwk850e65xavb.png)
+![estrutura de pastas](https://res.cloudinary.com/doampncx5/image/upload/v1693131622/Screenshot_2023-07-25_220324.png)
 
 Antes de seguir vamos instalar algumas bibliotecas como dependencies:
 
@@ -119,7 +119,7 @@ O arquivo package.json atualizado ficará assim:
 
 Terminado esse trabalho execute o comando yarn start:dev no terminal pra subir a aplicação, que deverá ter a seguinte saída caso ocorra tudo como esperado:
 
-![terminal](https://res.cloudinary.com/practicaldev/image/fetch/s--FwhTpALd--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p5klfqnf3wcxsby3o8u2.png)
+![terminal](https://res.cloudinary.com/doampncx5/image/upload/v1693131726/Screenshot_2023-07-26_132052.png)
 
 ## Criando o server com fastify
 
@@ -197,6 +197,6 @@ O próximo passo é atualizar o arquivo server.ts pra subir o servidor de acordo
 
 Agora você pode alternar entre express e fastify alterando o valor da variável SERVER_TYPE. Ao escolher o fastify a saída no terminal deverá ser assim:
 
-![terminal](https://res.cloudinary.com/practicaldev/image/fetch/s--00RIYc-V--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ra2vwgty5gdgxaokgfvb.png)
+![terminal](https://res.cloudinary.com/doampncx5/image/upload/v1693131813/Screenshot_2023-07-26_133513.png)
 
 Aqui chega ao fim o segundo artigo da série. Qualquer dúvida deixe nos comentários que terei o prazer de responder.
