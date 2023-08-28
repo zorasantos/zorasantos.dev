@@ -3,7 +3,7 @@ author: "Zoranildo Santos"
 title: "Docker Descomplicado: Um Resumo Prático dos Principais Comandos"
 description: "Aprenda os comandos mais usados do docker"
 publishedAt: "18/07/2023"
-tags: ["docker", "devops"]
+tags: ["Docker", "DevOps"]
 ---
 
 O Docker é uma plataforma de código aberto usada para criar, gerenciar e executar aplicativos em contêineres. Nas linhas abaixo vamos apresentar um resumo dos comandos essenciais do Docker com explicações para cada um deles:

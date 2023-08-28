@@ -3,7 +3,7 @@ author: "Zoranildo Santos"
 title: "Aprenda a Criar um Bouncy Loading Animation Apenas com CSS"
 description: "Vamos entender o passo-a-passo e cada propriedade css necessária pra criar um bouncy loading animation."
 publishedAt: "19/07/2023"
-tags: ["css", "html"]
+tags: ["CSS", "HTML"]
 ---
 
 O intuito do artigo não é apenas mostrar como podemos criar um loading bouncy apenas usando css, mas também explicar o que cada propriedade css faz para que ao fim tenhamos um bouncy loading animation.
@@ -100,25 +100,6 @@ Durante a animação, a bola é escalada horizontalmente para 1.25 vezes o seu t
   }
 </Code>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <span class="loader">
-      <span class="loader-ball"></span>
-      <span class="loader-ball"></span>
-      <span class="loader-ball"></span>
-      <span class="loader-ball"></span>
-    </span>
-  </body>
-</html>
-```
+![código html](https://res.cloudinary.com/doampncx5/image/upload/v1693218514/Screenshot_2023-08-28_072521.png)
 
 Confira o código funcionando, acesse o <a href="https://codesandbox.io/embed/bouncy-loading-mdqjpm?fontsize=14&hidenavigation=1&theme=dark" target="_blank">link codesandbox</a>

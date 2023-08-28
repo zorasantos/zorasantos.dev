@@ -3,7 +3,7 @@ author: "Zoranildo Santos"
 title: "Guia Prático: Aprenda a Construir uma API Node.js Desacoplada"
 description: "O intuito dessa série de artigos é mostrar na prática como criar e estruturar inicialmente uma aplicação Node.js"
 publishedAt: "26/07/2023"
-tags: ["node", "typescript", "api"]
+tags: ["Node", "TypeScript", "API"]
 ---
 
 O intuito dessa série de artigos é mostrar na prática como criar e estruturar inicialmente uma aplicação Node.js desacoplada usando typescript, conceitos de S.O.L.I.D e Clean Architecture. Ao final teremos uma api onde poderemos mudar facilmente por exemplo de express para fastify, prisma para typeorm, postgresql para mongoDb mudando apenas a variável de ambiente. Acompanhe essa série e verás.

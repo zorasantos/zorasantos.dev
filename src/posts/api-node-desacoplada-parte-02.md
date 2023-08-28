@@ -3,7 +3,7 @@ author: "Zoranildo Santos"
 title: "API Node Desacoplada: Criando servers com express e fastify"
 description: "Explorando a Criação de Servidores Desacoplados com Express e Fastify em APIs Node"
 publishedAt: "26/07/2023"
-tags: ["node", "typescript", "api"]
+tags: ["Node", "TypeScript", "API"]
 ---
 
 Neste artigo vamos criar os dois servidores, um com express e outro com fastify e deixar pronto para alternar entre um e outro mudando apenas o valor de uma variável.
