@@ -7,5 +7,17 @@ import PostDetails from "./PostDetails"
 import PostCard from "./PostCard"
 import Code from "./Code"
 import Tags from "./Tags"
+import ChipTag from "./ChipTag"
 
-export { Code, Footer, Header, Breadcrumbs, PostDetails, PostCard, Tags, ThemeProvider, ThemeSwitcher }
+export {
+  Code,
+  Footer,
+  Header,
+  Breadcrumbs,
+  PostDetails,
+  PostCard,
+  Tags,
+  ThemeProvider,
+  ThemeSwitcher,
+  ChipTag
+ }

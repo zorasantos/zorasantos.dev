@@ -12,7 +12,7 @@ export default function Header() {
       <Image priority alt="logo" src={Logo} className="w-20 h-16" />
     </Link>
     <nav className="flex gap-5">
-      <Link href="/about" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Sobre Mim</Link>
+      <Link href="/about" className="text-gray-700 dark:text-white font-semibold cursor-pointer hover:text-[#85F3E2]">Sobre Mim</Link>
       <ThemeSwitcher />
       {/* <Link href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Portfólio</Link> */}
       {/* <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Contato</a> */}

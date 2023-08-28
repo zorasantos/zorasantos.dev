@@ -24,13 +24,13 @@ e outra como devDependencies
   yarn add @types/express -D
 </Code>
 
-**dotenv**: pacote utilizado em projetos Node.js para carregar variáveis de ambiente de arquivos .env. Ele é especialmente útil para gerenciar configurações sensíveis e variáveis que podem variar de ambiente para ambiente (por exemplo, desenvolvimento, teste e produção) sem a necessidade de codificar essas informações diretamente no código.
+`dotenv`: pacote utilizado em projetos Node.js para carregar variáveis de ambiente de arquivos .env. Ele é especialmente útil para gerenciar configurações sensíveis e variáveis que podem variar de ambiente para ambiente (por exemplo, desenvolvimento, teste e produção) sem a necessidade de codificar essas informações diretamente no código.
 
-**express**: framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos.
+`express`: framework para aplicativo da web do Node.js mínimo e flexível que fornece um conjunto robusto de recursos.
 
-**fastify**: é uma estrutura da Web altamente focada em fornecer a melhor experiência de desenvolvimento com o mínimo de sobrecarga e uma poderosa arquitetura de plug-in. É inspirado no Hapi e no Express.
+`fastify`: é uma estrutura da Web altamente focada em fornecer a melhor experiência de desenvolvimento com o mínimo de sobrecarga e uma poderosa arquitetura de plug-in. É inspirado no Hapi e no Express.
 
-**@types/express**: adiciona tipagem estática ao express, o que permite ao TypeScript verificar tipos em tempo de compilação. Com isso, erros relacionados a tipos são detectados antecipadamente, evitando problemas em tempo de execução.
+`@types/express`: adiciona tipagem estática ao express, o que permite ao TypeScript verificar tipos em tempo de compilação. Com isso, erros relacionados a tipos são detectados antecipadamente, evitando problemas em tempo de execução.
 
 ## Criando o server express
 
@@ -183,7 +183,7 @@ Crie um arquivo .env na raiz do projeto e coloque o código abaixo:
   PORT_SERVER=5000
 </Code>
 
-O próximo passo é atualizar o arquivo server.ts pra subir o servidor de acordo com o valor da variável de ambiente SERVER_TYPE fornecida no arquivo .env. Com a alteração o arquivo ficará como apresentado abaixo:
+O próximo passo é atualizar o arquivo server.ts pra subir o servidor de acordo com o valor da variável de ambiente `SERVER_TYPE` fornecida no arquivo `.env`. Com a alteração o arquivo ficará como apresentado abaixo:
 
 <Code language="typescript">
   import 'dotenv/config'
@@ -195,7 +195,7 @@ O próximo passo é atualizar o arquivo server.ts pra subir o servidor de acordo
 </Code>
 
 
-Agora você pode alternar entre express e fastify alterando o valor da variável SERVER_TYPE. Ao escolher o fastify a saída no terminal deverá ser assim:
+Agora você pode alternar entre express e fastify alterando o valor da variável `SERVER_TYPE`. Ao escolher o fastify a saída no terminal deverá ser assim:
 
 ![terminal](https://res.cloudinary.com/doampncx5/image/upload/v1693131813/Screenshot_2023-07-26_133513.png)
 

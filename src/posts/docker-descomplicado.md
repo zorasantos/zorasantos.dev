@@ -1,7 +1,7 @@
 ---
 author: "Zoranildo Santos"
 title: "Docker Descomplicado: Um Resumo Prático dos Principais Comandos"
-description: "Aprenda os comandos mais usados do docker."
+description: "Aprenda os comandos mais usados do docker"
 publishedAt: "18/07/2023"
 tags: ["docker", "devops"]
 ---
@@ -124,5 +124,5 @@ Remove todos os recursos não utilizados, como contêineres parados, imagens nã
 
 Esses são alguns dos comandos mais úteis do Docker para começar a trabalhar com contêineres. Lembre-se de que o Docker oferece muitos outros comandos e opções, e a documentação oficial é uma excelente fonte de informações adicionais.
 
-<a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf" target="_blank">CLI Cheat Sheet </a> oficial do docker.
+<a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf" target="_blank">CLI Cheat Sheet oficial do docker.</a>
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import arrow_forward from "@/assets/arrow_forward.svg"
 import photo_author from "@/assets/perfil.jpeg"
+import { ChipTag } from "..";
 
 interface PostCardProps {
   title: string;
@@ -17,10 +18,10 @@ export default function PostCard(props: PostCardProps) {
         <span>{props.publishedAt}</span>
       </div>
       <h3 className="text-2xl font-bold">{props.title}</h3>
-      <p className="text-gray-700 font-thin line-clamp-2">{props.description}</p>
+      <p className="font-normal line-clamp-2">{props.description}</p>
       <div>
         {props.tags.map((tag, index) => (
-          <p key={tag + index} className="inline-block bg-gray-200 dark:bg-[#2D3748] rounded-full px-2 py-1 text-sm text-gray-600 mr-2 mb-2">{tag}</p>
+          <ChipTag key={tag + index}>{tag}</ChipTag>
         ))}
       </div>
       <div className="flex gap-2">
