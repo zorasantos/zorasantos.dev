@@ -9,7 +9,7 @@ export default function About() {
   return (
     <>
       <div className="flex items-center gap-3 mb-10">
-        <h3 className="text-[#556AF3] text-2xl font-bold">Sobre Mim</h3>
+        <h3 className="text-2xl font-bold">Sobre Mim</h3>
         <hr className="w-36" />
       </div>
       <div className="flex flex-col gap-5 text-justify text-lg text-[#2D3748]">

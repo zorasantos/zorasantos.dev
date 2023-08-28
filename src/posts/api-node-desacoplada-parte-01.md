@@ -6,7 +6,7 @@ publishedAt: "26/07/2023"
 tags: ["node", "typescript", "api"]
 ---
 
-O intuito dessa série de artigos é mostrar na prática como criar e estruturar inicialmente uma aplicação Node.js o mais desacoplado possível com typescript usando conceitos de S.O.L.I.D e Clean Architecture. Ao final teremos uma api onde poderemos mudar facilmente por exemplo de express para fastify, prisma para typeorm, postgresql para mongoDb mudando apenas a variável de ambiente. Acompanhe essa série e verás.
+O intuito dessa série de artigos é mostrar na prática como criar e estruturar inicialmente uma aplicação Node.js desacoplada usando typescript, conceitos de S.O.L.I.D e Clean Architecture. Ao final teremos uma api onde poderemos mudar facilmente por exemplo de express para fastify, prisma para typeorm, postgresql para mongoDb mudando apenas a variável de ambiente. Acompanhe essa série e verás.
 
 Nesse primeiro artigo vamos iniciar o projeto e configurar o typescript.
 
@@ -26,7 +26,7 @@ Vamos iniciar o projeto usando o comando abaixo que irá gerar o arquivo `packag
 
 Qual a utilidade de cada pacote:
 
-**@types/node**: biblioteca que fornece definições de tipos (TypeScript) para os módulos nativos do Node.js. Ela é usada em projetos TypeScript quando se deseja obter suporte para a verificação de tipos.
+`@types/node`: biblioteca que fornece definições de tipos (TypeScript) para os módulos nativos do Node.js. Ela é usada em projetos TypeScript quando se deseja obter suporte para a verificação de tipos.
 
 **tsx**: biblioteca utilizada para executar arquivos TypeScript (com extensão.ts) diretamente no Node.js, sem a necessidade de compilar previamente os arquivos para JavaScript (extensão.js). O pacote tsx foi aprimorado com *esbuild* para executar arquivos TypeScript e ESM.
 

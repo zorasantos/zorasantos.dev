@@ -2,9 +2,9 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Roboto } from 'next/font/google'
-import { Footer, Header } from '@/components'
+import { Footer, Header, ThemeProvider } from '@/components'
 
-const roboto = Roboto({ subsets: ['latin'], weight: '400' })
+const roboto = Roboto({ subsets: ['greek'], weight: '300' })
 
 export const metadata: Metadata = {
   title: 'Zoranildo Santos',
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <head>
         <Script
           id='gtm'
@@ -41,9 +41,11 @@ export default function RootLayout({
           style={{display: 'none', visibility: 'hidden'}}>
         </iframe>
       </noscript>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

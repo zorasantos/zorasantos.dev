@@ -3,6 +3,7 @@ import Link from "next/link";
 import Markdown from "markdown-to-jsx";
 import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost } from "@/utils";
 import { Breadcrumbs, Code, PostDetails, Tags } from "@/components";
+import { CustomCode } from "@/CustomMarkdown";
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -23,14 +24,21 @@ export default async function Post(params: { params: { slug: string } }) {
     return notFound()
   }
 
+
   return (
     <div className="grid grid-cols-12">
       <div className="col-span-full md:col-span-8 row-span-full">
         <Breadcrumbs page="Blog" title={post?.data?.title} />
         <PostDetails author={post?.data?.author} publishedAt={post?.data?.publishedAt} description={post?.data?.description} title={post?.data?.title}/>
-        <article className="prose prose-img:mx-auto prose-img:aspect-auto prose-headings:text-[#556AF3] text-lg mx-auto max-w-6xl md:max-w-full text-justify">
+        <article className="prose prose-img:mx-auto prose-img:aspect-auto prose-headings:text-primary text-lg mx-auto max-w-6xl md:max-w-full text-justify">
           <Markdown options={{
             overrides: {
+              code: {
+                component: CustomCode,
+                props: {
+                  className: "text-sm font-semibold bg-gray-200 p-1 rounded-md dark:bg-[#2D3748] dark:text-[#FDBA74]"
+                }
+              },
               Code: {
                 component: Code
               }
