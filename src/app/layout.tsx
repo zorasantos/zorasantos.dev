@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import Script from 'next/script'
-import { Roboto } from 'next/font/google'
-import { Footer, Header } from '@/components'
+import { Mulish } from 'next/font/google'
+import { Footer, Header, ThemeProvider } from '@/components'
 
-const roboto = Roboto({ subsets: ['latin'], weight: '400' })
+const mulish = Mulish({ subsets: ['latin']})
 
 export const metadata: Metadata = {
   title: 'Zoranildo Santos',
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <head>
         <Script
           id='gtm'
@@ -32,7 +32,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${roboto.className} min-h-screen px-10 md:px-24`}>
+      <body className={`${mulish.className} min-h-screen px-10 md:px-24`}>
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${process.env.GA_TRACKING_ID}`}
@@ -41,9 +41,11 @@ export default function RootLayout({
           style={{display: 'none', visibility: 'hidden'}}>
         </iframe>
       </noscript>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )

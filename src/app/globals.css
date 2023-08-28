@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: #F9FAFB;
+  @apply bg-[#F9FAFB]  text-[#2D3748] prose-p:text-[#2D3748]
+  dark:bg-[#141922] dark:text-[#F7FAFC]  prose-p:dark:text-[#f7fafc] prose-headings:dark:text-primary-dark
+  dark:prose-ol:text-white dark:prose-strong:text-[#FDBA74]
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-primary dark:text-primary-dark
 }

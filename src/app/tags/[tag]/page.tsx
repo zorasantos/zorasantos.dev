@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { PostCard } from "@/components";
-import { getPostMetadata } from "@/utils";
+import { Breadcrumbs, PostCard } from "@/components";
+import { getPostContent, getPostMetadata } from "@/utils";
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -41,6 +41,9 @@ export default function TagPage(params: { params: { tag: string } }) {
 
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div>
+    <div className="flex flex-col gap-10">
+      <Breadcrumbs page="Tags" title={tag} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">{postPreviews}</div>
+    </div>
   )
 }

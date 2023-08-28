@@ -24,13 +24,13 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
       <li>
         <Link
           href="/"
-          className="text-[#556AF3] hover:text-[#85F3E2]"
+          className="text-primary dark:text-primary-dark hover:text-primary-light dark:hover:text-primary-light"
           >{page}</Link>
       </li>
       <li>
         <Image alt="icon chevron right" src={chevron_right} className="w-12 sm:w-8" />
       </li>
-      <li className="text-gray-700 font-thin text-[13px] line-clamp-2">{title}</li>
+      <li className="font-normal text-sm line-clamp-2">{title}</li>
     </ol>
   </nav>
   )
