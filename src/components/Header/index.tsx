@@ -8,11 +8,11 @@ export default function Header() {
 
   return (
   <header className="flex justify-between items-center mb-10 h-32">
-    <Link href="/">
+    <Link tabIndex={0} href="/">
       <Image priority alt="logo" src={Logo} className="w-20 h-16" />
     </Link>
     <nav className="flex gap-5">
-      <Link href="/about" className="text-gray-700 dark:text-white font-semibold cursor-pointer hover:text-[#85F3E2]">Sobre Mim</Link>
+      <Link tabIndex={0} href="/about" className="text-gray-700 dark:text-white font-semibold cursor-pointer hover:text-[#85F3E2]">Sobre Mim</Link>
       <ThemeSwitcher />
       {/* <Link href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Portfólio</Link> */}
       {/* <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Contato</a> */}
