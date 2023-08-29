@@ -30,7 +30,7 @@ export default async function Post(params: { params: { slug: string } }) {
       <div className="col-span-full md:col-span-8 row-span-full">
         <Breadcrumbs page="Blog" title={post?.data?.title} />
         <PostDetails author={post?.data?.author} publishedAt={post?.data?.publishedAt} description={post?.data?.description} title={post?.data?.title}/>
-        <article className="prose prose-img:mx-auto prose-img:aspect-auto prose-headings:text-primary dark:prose-a:text-white prose-p:text-lg prose-ol:text-lg mx-auto max-w-6xl md:max-w-full text-justify">
+        <article role="main" className="prose prose-img:mx-auto prose-img:aspect-auto prose-headings:text-primary dark:prose-a:text-white prose-p:text-lg prose-ol:text-lg mx-auto max-w-6xl md:max-w-full text-justify">
           <Markdown options={{
             overrides: {
               code: {
