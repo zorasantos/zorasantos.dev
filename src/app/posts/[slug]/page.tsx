@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Markdown from "markdown-to-jsx";
-import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost } from "@/utils";
+import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost, handleKeyUp } from "@/utils";
 import { Breadcrumbs, Code, PostDetails, Tags } from "@/components";
 import { CustomCode } from "@/CustomMarkdown";
 
@@ -30,7 +30,7 @@ export default async function Post(params: { params: { slug: string } }) {
       <div className="col-span-full md:col-span-8 row-span-full">
         <Breadcrumbs page="Blog" title={post?.data?.title} />
         <PostDetails author={post?.data?.author} publishedAt={post?.data?.publishedAt} description={post?.data?.description} title={post?.data?.title}/>
-        <article className="prose prose-img:mx-auto prose-img:aspect-auto prose-headings:text-primary dark:prose-a:text-white prose-p:text-lg prose-ol:text-lg mx-auto max-w-6xl md:max-w-full text-justify">
+        <article role="main" className="prose prose-img:mx-auto prose-img:aspect-auto prose-headings:text-primary dark:prose-a:text-white prose-p:text-lg prose-ol:text-lg mx-auto max-w-6xl md:max-w-full text-justify">
           <Markdown options={{
             overrides: {
               code: {
@@ -49,7 +49,7 @@ export default async function Post(params: { params: { slug: string } }) {
       <div className="hidden sticky top-96 space-y-4 h-[100dvh] md:block flex-col col-start-10 col-end-13">
           <div className="flex flex-col gap-2">
             <span className="text-primary dark:text-primary-dark text-xl font-semibold">Tabela de Conteúdos</span>
-            <span onClick={scrollToTop} className="text-base hover:text-primary dark:hover:text-primary-dark mb-2 cursor-pointer">Topo da página</span>
+            <span tabIndex={0} onClick={scrollToTop} onKeyUp={handleKeyUp} className="text-base hover:text-primary dark:hover:text-primary-dark mb-2 cursor-pointer">Topo da página</span>
           {headings?.map(item => (
             <Link className="flex flex-col text-lg mb-2 hover:text-primary dark:hover:text-primary-dark" key={item.id} href={`#${item.id}`}>{item.title}</Link>
           ))}
