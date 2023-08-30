@@ -4,6 +4,25 @@ import Markdown from "markdown-to-jsx";
 import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost, handleKeyUp } from "@/utils";
 import { Breadcrumbs, Code, PostDetails, Tags } from "@/components";
 import { CustomCode } from "@/CustomMarkdown";
+import { Metadata } from "next";
+
+type Props = {
+  params: {
+    slug: string
+  }
+}
+
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+
+  const posts = getPostMetadata();
+
+  const meta = posts.find(item => item.slug === params.slug)
+
+  return {
+    title: meta?.title,
+    description: meta?.description
+  }
+}
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();

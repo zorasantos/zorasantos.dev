@@ -7,8 +7,10 @@ import { Footer, Header, ThemeProvider } from '@/components'
 const mulish = Mulish({ subsets: ['latin']})
 
 export const metadata: Metadata = {
-  title: 'Zoranildo Santos',
-  description: 'Site pessoal do engenheiro de software Zoranildo Santos',
+  title: {
+    default: 'Zora Santos',
+    template: '%s | Zora Santos'
+  }
 }
 
 export default function RootLayout({

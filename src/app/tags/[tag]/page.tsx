@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Breadcrumbs, PostCard } from "@/components";
-import { getPostContent, getPostMetadata } from "@/utils";
+import { getPostMetadata } from "@/utils";
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
