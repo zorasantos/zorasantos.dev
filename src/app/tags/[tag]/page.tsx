@@ -1,10 +1,24 @@
 import Link from "next/link";
 import { Breadcrumbs, PostCard } from "@/components";
 import { getPostMetadata } from "@/utils";
+import { Metadata } from "next/types";
+
+type TagProps = {
+  params: {
+    tag: string
+  }
+}
+
+export async function generateMetadata({ params }: TagProps): Promise<Metadata> {
+  return {
+    title: params?.tag,
+    description: `Lista todos os artigos com a tag ${params?.tag}`
+  }
+}
+
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
-
   const tags = posts.map(item => item.tags).map(item => item);
 
   const uniqueTags = tags.reduce((acc, tags) => {
@@ -21,10 +35,9 @@ export const generateStaticParams = async () => {
   }));
 }
 
-export default function TagPage(params: { params: { tag: string } }) {
+export default function TagPage({ params }: TagProps) {
 
-  const { tag } = params?.params
-
+  const { tag } = params
   const posts = getPostMetadata();
 
   const filterPostsByTag = (tag: string) => {
