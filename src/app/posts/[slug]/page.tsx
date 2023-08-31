@@ -4,6 +4,23 @@ import Markdown from "markdown-to-jsx";
 import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost, handleKeyUp } from "@/utils";
 import { Breadcrumbs, Code, PostDetails, Tags } from "@/components";
 import { CustomCode } from "@/CustomMarkdown";
+import { Metadata } from "next";
+
+type SlugProps = {
+  params: {
+    slug: string
+  }
+}
+
+export async function generateMetadata({ params }: SlugProps): Promise<Metadata> {
+  const posts = getPostMetadata();
+  const meta = posts.find(item => item.slug === params.slug)
+
+  return {
+    title: meta?.title,
+    description: meta?.description
+  }
+}
 
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
@@ -13,8 +30,8 @@ export const generateStaticParams = async () => {
   }));
 }
 
-export default async function Post(params: { params: { slug: string } }) {
-  const { slug } = params?.params
+export default async function Post({ params }: SlugProps) {
+  const { slug } = params
 
   const post = getPostContent(slug)
   const headings = getHeadings(slug)

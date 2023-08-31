@@ -4,8 +4,7 @@ import Link from "next/link";
 import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
-  title: 'Zoranildo Santos',
-  description: 'Site pessoal do engenheiro de software Zoranildo Santos',
+  description:  'Site pessoal do engenheiro de software Zoranildo Santos'
 }
 
 export default function Home() {
