@@ -3,9 +3,24 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import DarkModeIcon from "@/assets/dark_mode.svg"
 import LightModeIcon from "@/assets/light_mode.svg"
+import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme  } = useTheme()
+  const [mounted, setMounted] = useState<boolean>(false)
+
+  useEffect(() => {
+    setMounted(!mounted)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  if (!mounted) {
+    return (
+      <div className="animate-pulse">
+        <div className="rounded-full shadow bg-gray-200 h-6 w-6"></div>
+      </div>
+    )
+  }
 
   const icon =  theme === "dark" ? LightModeIcon : DarkModeIcon
 
