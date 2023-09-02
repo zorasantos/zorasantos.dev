@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Mulish } from 'next/font/google'
 import { Footer, Header, ThemeProvider } from '@/components'
+import { ScrollDirectionProvider } from '@/context/ScrollDirection'
 
 const mulish = Mulish({ subsets: ['latin']})
 
@@ -45,7 +46,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${mulish.className} min-h-screen px-10 md:px-24`}>
+      <body className={`${mulish.className} min-h-screen`}>
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${process.env.GA_TRACKING_ID}`}
@@ -55,9 +56,11 @@ export default function RootLayout({
         </iframe>
       </noscript>
         <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
+          <ScrollDirectionProvider>
+            <Header />
+            <main className='px-10 md:px-24'>{children}</main>
+            <Footer />
+          </ScrollDirectionProvider>
         </ThemeProvider>
       </body>
     </html>
