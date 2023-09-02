@@ -22,7 +22,7 @@ export const generateStaticParams = async () => {
   const tags = posts.map(item => item.tags).map(item => item);
 
   const uniqueTags = tags.reduce((acc, tags) => {
-    tags.forEach(tag => {
+    tags?.forEach(tag => {
       if (!acc.includes(tag)) {
         acc.push(tag);
       }

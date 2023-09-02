@@ -46,7 +46,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${mulish.className} min-h-screen px-10 md:px-24`}>
+      <body className={`${mulish.className} min-h-screen`}>
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${process.env.GA_TRACKING_ID}`}
@@ -58,7 +58,7 @@ export default function RootLayout({
         <ThemeProvider>
           <ScrollDirectionProvider>
             <Header />
-            {children}
+            <main className='px-10 md:px-24'>{children}</main>
             <Footer />
           </ScrollDirectionProvider>
         </ThemeProvider>
