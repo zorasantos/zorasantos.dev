@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Mulish } from 'next/font/google'
 import { Footer, Header, ThemeProvider } from '@/components'
+import { ScrollDirectionProvider } from '@/context/ScrollDirection'
 
 const mulish = Mulish({ subsets: ['latin']})
 
@@ -55,9 +56,11 @@ export default function RootLayout({
         </iframe>
       </noscript>
         <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
+          <ScrollDirectionProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ScrollDirectionProvider>
         </ThemeProvider>
       </body>
     </html>
