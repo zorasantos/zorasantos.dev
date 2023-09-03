@@ -3,7 +3,7 @@
 import SyntaxHighlighter from 'react-syntax-highlighter/dist/esm/prism';
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-export default function Code({ children, language }: any) {
+export default function Code({ children = "", language = "" }) {
   return (
     <SyntaxHighlighter
       language={language}
