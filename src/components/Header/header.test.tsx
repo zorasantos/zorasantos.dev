@@ -1,4 +1,3 @@
-import { vi, expect, describe, test } from "vitest";
 import { render, screen } from "@/utils/test"
 import Header from "."
 
