@@ -1,7 +1,7 @@
 import { render, screen } from '@/utils/test';
 import Footer from '.';
 
-describe('Code Component', () => {
+describe('Footer Component', () => {
   test('Should be able renders footer correctly', () => {
     render(<Footer />);
 
