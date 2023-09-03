@@ -35,7 +35,7 @@ export default function ThemeSwitcher() {
   }
 
   return (
-    <Image tabIndex={0} className=" bg-slate-500 dark:bg-white rounded-full cursor-pointer"
+    <Image tabIndex={0} width={24} height={24} className=" bg-slate-500 dark:bg-white rounded-full cursor-pointer"
      onClick={HandleSwitcherTheme} onKeyUp={handleKeyUp} src={icon}
      alt={`${theme} mode icon`} />
   )
