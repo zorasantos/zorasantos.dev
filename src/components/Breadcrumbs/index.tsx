@@ -10,6 +10,8 @@ interface BreadcrumbsProps {
 }
 
 export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
+  const path = page === 'Blog' ? '/' : `/${page.toLowerCase()}`
+
   return (
     <nav className="w-full rounded-md" aria-label="Breadcrumb">
     <ol className="list-reset flex items-center">
@@ -24,7 +26,7 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
       <li>
         <Link
           tabIndex={0}
-          href="/"
+          href={path}
           className="text-primary dark:text-primary-dark hover:text-primary-light dark:hover:text-primary-light"
           >{page}</Link>
       </li>

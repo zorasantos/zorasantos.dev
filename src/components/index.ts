@@ -5,6 +5,7 @@ import ThemeProvider from "./ThemeProvider"
 import ThemeSwitcher from "./ThemeSwitcher"
 import PostDetails from "./PostDetails"
 import PostCard from "./PostCard"
+import PortfolioCard from "./PortfolioCard"
 import Code from "./Code"
 import Tags from "./Tags"
 import ChipTag from "./ChipTag"
@@ -19,5 +20,6 @@ export {
   Tags,
   ThemeProvider,
   ThemeSwitcher,
-  ChipTag
+  ChipTag,
+  PortfolioCard
  }

@@ -16,8 +16,8 @@ export default function Header() {
     </Link>
     <nav className="flex gap-5">
       <Link tabIndex={0} href="/about" className="text-gray-700 dark:text-white font-semibold cursor-pointer hover:text-primary-light dark:hover:text-primary-light">Sobre Mim</Link>
+      <Link href="/portfolio" className="text-gray-700 font-semibold cursor-pointer dark:text-white hover:text-primary-light dark:hover:text-primary-light">Portfólio</Link>
       <ThemeSwitcher />
-      {/* <Link href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Portfólio</Link> */}
       {/* <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Contato</a> */}
     </nav>
   </header>
