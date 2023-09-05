@@ -13,10 +13,10 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
   const path = page === 'Blog' ? '/' : `/${page.toLowerCase()}`
 
   return (
-    <nav className="w-full rounded-md" aria-label="Breadcrumb">
+    <nav role="navigation" className="w-full rounded-md" aria-label="Breadcrumb">
     <ol className="list-reset flex items-center">
       <li>
-        <Link tabIndex={0} href="/">
+        <Link rel="noopener" tabIndex={0} href="/">
           <Image alt="icon home" src={home_icon} width={28} height={28} className="w-10 sm:w-7" />
         </Link>
       </li>
@@ -25,8 +25,10 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
       </li>
       <li>
         <Link
+          rel="noopener"
           tabIndex={0}
           href={path}
+          aria-current="page"
           className="text-primary dark:text-primary-dark hover:text-primary-light dark:hover:text-primary-light"
           >{page}</Link>
       </li>
