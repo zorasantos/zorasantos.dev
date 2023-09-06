@@ -1,7 +1,9 @@
-import PostCard from "@/components/PostCard";
-import { getPostMetadata } from "@/utils";
-import Link from "next/link";
+import dynamic from "next/dynamic"
 import { Metadata } from "next/types";
+import Link from "next/link";
+import { getPostMetadata } from "@/utils";
+
+const PostCard = dynamic(() => import("@/components/PostCard"))
 
 export const metadata: Metadata = {
   description:  'Site pessoal do engenheiro de software Zoranildo Santos'

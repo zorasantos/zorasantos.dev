@@ -1,5 +1,7 @@
-import { PortfolioCard } from "@/components";
+import dynamic from "next/dynamic"
 import { getPortfolioMetadata } from "@/utils";
+
+const PortfolioCard = dynamic(() => import("@/components/PortfolioCard"))
 
 export default function Portfolio() {
 

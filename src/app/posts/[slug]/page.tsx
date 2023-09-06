@@ -1,10 +1,15 @@
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import Markdown from "markdown-to-jsx";
-import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost, handleKeyUp } from "@/utils";
-import { Breadcrumbs, Code, PostDetails, Tags } from "@/components";
-import { CustomCode } from "@/CustomMarkdown";
+import dynamic from "next/dynamic"
 import { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { getPostContent, getPostMetadata, getHeadings, scrollToTop, getTagsByPost, handleKeyUp } from "@/utils";
+import { CustomCode } from "@/CustomMarkdown";
+
+const Breadcrumbs = dynamic(() => import("@/components/Breadcrumbs"))
+const Code = dynamic(() => import("@/components/Code"))
+const PostDetails = dynamic(() => import("@/components/PostDetails"))
+const Markdown = dynamic(() => import("markdown-to-jsx"))
+const Tags = dynamic(() => import("@/components/Tags"))
 
 type SlugProps = {
   params: {

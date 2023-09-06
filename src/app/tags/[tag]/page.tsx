@@ -1,7 +1,10 @@
 import Link from "next/link";
-import { Breadcrumbs, PostCard } from "@/components";
-import { getPostMetadata } from "@/utils";
+import dynamic from "next/dynamic"
 import { Metadata } from "next/types";
+import { getPostMetadata } from "@/utils";
+
+const Breadcrumbs = dynamic(() => import("@/components/Breadcrumbs"))
+const PostCard = dynamic(() => import("@/components/PostCard"))
 
 type TagProps = {
   params: {

@@ -1,10 +1,11 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-
+import dynamic from "next/dynamic"
 import Logo from "@/assets/logo.png"
-import { ThemeSwitcher } from "..";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
+
+const ThemeSwitcher = dynamic(() => import("../ThemeSwitcher"))
 
 export default function Header() {
   const { isHidden, isReachedTop } = useScrollDirection()
@@ -17,8 +18,8 @@ export default function Header() {
     <nav className="flex gap-5">
       <Link rel="noopener" tabIndex={0} href="/about" className="text-gray-700 dark:text-white font-semibold cursor-pointer hover:text-primary-light dark:hover:text-primary-light">Sobre Mim</Link>
       <Link rel="noopener" href="/portfolio" className="text-gray-700 font-semibold cursor-pointer dark:text-white hover:text-primary-light dark:hover:text-primary-light">Portfólio</Link>
-      <ThemeSwitcher />
       {/* <a href="" className="text-gray-700 font-semibold cursor-pointer hover:text-[#85F3E2]">Contato</a> */}
+      <ThemeSwitcher />
     </nav>
   </header>
   )
