@@ -71,7 +71,7 @@ export default async function Post({ params }: SlugProps) {
       <div className="hidden sticky top-96 space-y-4 h-[100dvh] md:block flex-col col-start-10 col-end-13">
           <div className="flex flex-col gap-2">
             <span className="text-primary dark:text-primary-dark text-xl font-semibold">Tabela de Conteúdos</span>
-            <span tabIndex={0} onClick={scrollToTop} onKeyUp={handleKeyUp} className="text-base hover:text-primary dark:hover:text-primary-dark mb-2 cursor-pointer">Topo da página</span>
+            <span data-cy="page-top" tabIndex={0} onClick={scrollToTop} onKeyUp={handleKeyUp} className="text-base hover:text-primary dark:hover:text-primary-dark mb-2 cursor-pointer">Topo da página</span>
           {headings?.map(item => (
             <Link className="flex flex-col text-lg mb-2 hover:text-primary dark:hover:text-primary-dark" key={item.id} href={`#${item.id}`}>{item.title}</Link>
           ))}

@@ -6,7 +6,7 @@ interface PreviewPostCardProps extends PostCardProps {}
 
 export default function PreviewPostCard(props: PreviewPostCardProps) {
   return (
-    <Link key={props.slug} href={`/posts/${props.slug}`}>
+    <Link id={props.slug} key={props.slug} href={`/posts/${props.slug}`}>
       <PostCard {...props} />
     </Link>
   )
