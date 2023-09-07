@@ -11,7 +11,7 @@ type PortfolioCardProps = {
 export default function PortfolioCard({ description, title, slug }: PortfolioCardProps) {
   return (
     <>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
+      <span className="text-xl font-bold mb-3 text-primary dark:text-primary-dark">{title}</span>
       <p className="mb-4" aria-label="Descrição portfolio card">{description}</p>
       <div className="flex gap-2 mb-3">
         <Image alt="icon arrow forward" src={arrow_forward}  width={24} height={24} className="w-6" />
