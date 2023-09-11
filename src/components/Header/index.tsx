@@ -1,8 +1,6 @@
 "use client"
-import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic"
-import Logo from "@/assets/logo.png"
 import { useScrollDirection } from "@/hooks/useScrollDirection";
 
 const ThemeSwitcher = dynamic(() => import("../ThemeSwitcher"))
