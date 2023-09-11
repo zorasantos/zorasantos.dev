@@ -1,8 +1,10 @@
-import { Breadcrumbs } from "@/components";
-import { getPortfolioContent, getPortfolioMetadata } from "@/utils";
-import Markdown from "markdown-to-jsx";
+import dynamic from "next/dynamic";
 import { notFound } from "next/navigation";
 import { Metadata } from "next/types";
+import { getPortfolioContent, getPortfolioMetadata } from "@/utils";
+
+const Breadcrumbs = dynamic(() => import("@/components/Breadcrumbs"))
+const Markdown = dynamic(() => import("markdown-to-jsx"))
 
 type SlugProps = {
   params: {

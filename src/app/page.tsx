@@ -1,7 +1,8 @@
-import PostCard from "@/components/PostCard";
-import { getPostMetadata } from "@/utils";
-import Link from "next/link";
+import dynamic from "next/dynamic"
 import { Metadata } from "next/types";
+import { getPostMetadata } from "@/utils";
+
+const PreviewPostCard = dynamic(() => import("@/components/PreviewPostCard"))
 
 export const metadata: Metadata = {
   description:  'Site pessoal do engenheiro de software Zoranildo Santos'
@@ -9,10 +10,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const postMetadata = getPostMetadata();
-  const postPreviews = postMetadata.map((post) => (
-    <Link key={post.slug} href={`/posts/${post.slug}`}>
-      <PostCard {...post} />
-    </Link>
+
+  const postPreviews = postMetadata?.map((post) => (
+    <PreviewPostCard key={post.slug} { ...post } />
   ));
 
   return (

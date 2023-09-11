@@ -7,7 +7,7 @@ describe('Portfolio Card Component', () => {
 
     render(<PortfolioCard { ...items } />);
 
-    const title = screen.getByRole("heading", { name: "Test Title" })
+    const title = screen.getByText("Test Title")
     const description = screen.getByLabelText("Descrição portfolio card").getAttribute('aria-label')
     const icon = screen.getByRole("img", { name: "icon arrow forward" })
     const moreDetails = screen.getByText('Mais Detalhes')

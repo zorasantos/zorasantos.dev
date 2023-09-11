@@ -3,7 +3,7 @@ import arrow_forward from "@/assets/arrow_forward.svg"
 import photo_author from "@/assets/perfil.jpeg"
 import { ChipTag } from "..";
 
-interface PostCardProps {
+export interface PostCardProps {
   title: string;
   publishedAt: string;
   description: string;
@@ -20,7 +20,7 @@ export default function PostCard(props: PostCardProps) {
       <h3 className="text-2xl font-bold">{props.title}</h3>
       <p aria-label="Descrição" className="font-normal line-clamp-2">{props.description}</p>
       <div aria-label="Lista de tags">
-        {props.tags.map((tag, index) => (
+        {props?.tags.map((tag, index) => (
           <ChipTag key={tag + index}>{tag}</ChipTag>
         ))}
       </div>

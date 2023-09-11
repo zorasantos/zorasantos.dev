@@ -4,6 +4,7 @@ import Breadcrumbs from "./Breadcrumbs"
 import ThemeProvider from "./ThemeProvider"
 import ThemeSwitcher from "./ThemeSwitcher"
 import PostDetails from "./PostDetails"
+import PreviewPostCard from "./PreviewPostCard"
 import PostCard from "./PostCard"
 import PortfolioCard from "./PortfolioCard"
 import Code from "./Code"
@@ -21,5 +22,6 @@ export {
   ThemeProvider,
   ThemeSwitcher,
   ChipTag,
-  PortfolioCard
+  PortfolioCard,
+  PreviewPostCard
  }

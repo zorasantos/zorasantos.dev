@@ -1,9 +1,13 @@
 import './globals.css'
-import type { Metadata } from 'next'
+import dynamic from "next/dynamic"
 import Script from 'next/script'
 import { Mulish } from 'next/font/google'
-import { Footer, Header, ThemeProvider } from '@/components'
+import type { Metadata } from 'next'
 import { ScrollDirectionProvider } from '@/context/ScrollDirection'
+
+const Footer = dynamic(() => import("@/components/Footer"))
+const Header = dynamic(() => import("@/components/Header"))
+const ThemeProvider = dynamic(() => import("@/components/ThemeProvider"))
 
 const mulish = Mulish({ subsets: ['latin']})
 

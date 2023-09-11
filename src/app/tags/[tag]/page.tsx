@@ -1,7 +1,9 @@
-import Link from "next/link";
-import { Breadcrumbs, PostCard } from "@/components";
-import { getPostMetadata } from "@/utils";
+import dynamic from "next/dynamic"
 import { Metadata } from "next/types";
+import { getPostMetadata } from "@/utils";
+
+const Breadcrumbs = dynamic(() => import("@/components/Breadcrumbs"))
+const PreviewPostCard = dynamic(() => import("@/components/PreviewPostCard"))
 
 type TagProps = {
   params: {
@@ -16,12 +18,11 @@ export async function generateMetadata({ params }: TagProps): Promise<Metadata> 
   }
 }
 
-
 export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   const tags = posts.map(item => item.tags).map(item => item);
 
-  const uniqueTags = tags.reduce((acc, tags) => {
+  const uniqueTags = tags?.reduce((acc, tags) => {
     tags?.forEach(tag => {
       if (!acc.includes(tag)) {
         acc.push(tag);
@@ -47,11 +48,8 @@ export default function TagPage({ params }: TagProps) {
   const result = filterPostsByTag(tag)
 
   const postPreviews = result?.map((post) => (
-    <Link key={post.slug} href={`/posts/${post.slug}`}>
-      <PostCard {...post} />
-    </Link>
+    <PreviewPostCard key={post.slug} { ...post } />
   ));
-
 
   return (
     <div className="flex flex-col gap-10">
