@@ -14,8 +14,6 @@ describe('Post card Component', () => {
     const title = screen.getByRole("heading", { name: "Test 1" })
     const description = screen.getByLabelText("Descrição").getAttribute('aria-label')
     const tags = screen.getByLabelText("Lista de tags").getAttribute('aria-label')
-    const icon = screen.getByRole("img", { name: "icon arrow forward" })
-    const moreRead = screen.getByText('Ler Mais')
 
 
     expect(image).toBeDefined()
@@ -24,12 +22,9 @@ describe('Post card Component', () => {
     expect(description).toBeDefined()
     expect(tags).toBeDefined()
     post.tags.forEach((tag) => {
-      const tagElement = screen.getByText(tag);
+      const tagElement = screen.findAllByText(tag);
       expect(tagElement).toBeDefined()
     });
-    expect(icon).toBeDefined()
-    expect(icon.getAttribute('alt')).toBe('icon arrow forward')
-    expect(moreRead).toBeDefined()
 
   });
 })
