@@ -1,9 +1,11 @@
 import Image from "next/image";
-import arrow_forward from "@/assets/arrow_forward.svg"
+import dynamic from "next/dynamic";
 import photo_author from "@/assets/perfil.jpeg"
-import { ChipTag } from "..";
 
-export interface PostCardProps {
+const ChipTag = dynamic(() => import("@/components/ChipTag"))
+const ReadMore = dynamic(() => import("@/components/ReadMore"))
+
+export type PostCardProps = {
   title: string;
   publishedAt: string;
   description: string;
@@ -25,10 +27,7 @@ export default function PostCard(props: PostCardProps) {
           <ChipTag key={tag + index}>{tag}</ChipTag>
         ))}
       </div>
-      <div className="flex gap-2">
-        <Image alt="icon arrow forward" src={arrow_forward}  width={24} height={24} className="w-6" />
-        <span className="dark:text-white dark font-semibold">Ler Mais</span>
-      </div>
+      <ReadMore text="Ler mais" />
     </div>
   )
 }

@@ -1,6 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
-import arrow_forward from "@/assets/arrow_forward.svg"
+import dynamic from "next/dynamic";
+const ReadMore = dynamic(() => import("@/components/ReadMore"))
 
 type PortfolioCardProps = {
   title: string;
@@ -13,10 +12,7 @@ export default function PortfolioCard({ description, title, slug }: PortfolioCar
     <>
       <span className="text-xl font-bold mb-3 text-primary dark:text-primary-dark">{title}</span>
       <p className="mb-4" aria-label="Descrição portfolio card">{description}</p>
-      <div className="flex gap-2 mb-3">
-        <Image alt="icon arrow forward" src={arrow_forward}  width={24} height={24} className="w-6" />
-        <Link className="text-gray-700 dark:text-white dark:hover:text-primary-light font-semibold" href={`portfolio/${slug}`}>Mais Detalhes</Link>
-      </div>
+      <ReadMore className="mb-3" text="Mais Detalhes" slug={slug} />
     </>
   )
 }

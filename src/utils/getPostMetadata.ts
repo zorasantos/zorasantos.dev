@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-interface PostMetadata {
+type PostMetadata = {
   title: string;
   publishedAt: string;
   description: string;

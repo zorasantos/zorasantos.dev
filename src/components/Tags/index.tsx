@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChipTag } from "..";
 
-interface ITagsProps {
+type ITagsProps = {
   tags: string[];
 }
 

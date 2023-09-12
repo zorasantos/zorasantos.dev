@@ -4,7 +4,7 @@ import Image from "next/image";
 import chevron_right from "@/assets/chevron_right.svg"
 import home_icon from "@/assets/home.svg"
 
-interface BreadcrumbsProps {
+type BreadcrumbsProps = {
   title: string;
   page: string
 }
