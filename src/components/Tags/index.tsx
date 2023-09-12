@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { ChipTag } from "..";
+import dynamic from "next/dynamic";
+
+const ChipTag = dynamic(() => import("@/components/ChipTag"))
 
 type ITagsProps = {
   tags: string[];

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import chevron_right from "@/assets/chevron_right.svg"
-import home_icon from "@/assets/home.svg"
 
 type BreadcrumbsProps = {
   title: string;
@@ -17,7 +15,16 @@ export default function Breadcrumbs({ page, title }: BreadcrumbsProps) {
     <ol className="list-reset flex items-center">
       <li>
         <Link rel="noopener" tabIndex={0} href="/">
-          <Image alt="icon home" src={home_icon} width={28} height={28} className="w-10 sm:w-7" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          aria-label="home icon"
+          className="fill-primary dark:fill-primary-dark hover:fill-primary-light dark:hover:fill-primary-light h-7 w-7 sm:w-7"
+          fill="none"
+          viewBox="0 -960 960 960"
+        >
+          <path d="M220-180h150v-250h220v250h150v-390L480-765 220-570v390Zm-60 60v-480l320-240 320 240v480H530v-250H430v250H160Zm320-353Z"/>
+        </svg>
         </Link>
       </li>
       <li>

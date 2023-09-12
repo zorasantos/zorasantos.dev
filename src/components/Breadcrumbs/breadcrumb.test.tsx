@@ -5,16 +5,16 @@ describe("Breadcrumb component", () => {
   test("Should be able renders the Breadcrumb correctly", () => {
     render(<Breadcrumb page="Blog" title="Test Article Title" />)
 
-    const logo = screen.getAllByRole("img", { name: "icon home" })
+    const logo = screen.getByRole("img", { name: "home icon" })
     const icon = screen.getAllByRole("img", { name: "icon chevron right" })
-    const link = screen.getAllByRole("link", { name: "Blog" })
-    const linkIcon = screen.getAllByRole("link", { name: "icon home" })
+    const link = screen.getByRole("link", { name: "Blog" })
+    const linkIcon = screen.getByRole("link", { name: "home icon" })
 
     expect(logo).toBeDefined()
     expect(icon).toBeDefined()
     expect(link).toBeDefined()
-    expect(link[0].getAttribute('href')).toBe('/')
-    expect(linkIcon[0].getAttribute('href')).toBe('/')
-    expect(logo[0].getAttribute('alt')).toBe('icon home')
+    expect(link.getAttribute('href')).toBe('/')
+    expect(linkIcon.getAttribute('href')).toBe('/')
+    expect(logo.getAttribute('aria-label')).toBe('home icon')
   })
 })

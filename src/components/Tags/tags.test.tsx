@@ -8,7 +8,7 @@ describe('Tags Component', () => {
     render(<Tags tags={tags} />);
 
     tags.forEach((tag) => {
-      const tagElement = screen.getByText(tag);
+      const tagElement = screen.findAllByText(tag);
       expect(tagElement).toBeDefined()
     });
 
