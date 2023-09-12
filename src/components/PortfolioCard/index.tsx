@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Link from "next/link";
 const ReadMore = dynamic(() => import("@/components/ReadMore"))
 
 type PortfolioCardProps = {
@@ -12,7 +13,9 @@ export default function PortfolioCard({ description, title, slug }: PortfolioCar
     <>
       <span className="text-xl font-bold mb-3 text-primary dark:text-primary-dark">{title}</span>
       <p className="mb-4" aria-label="Descrição portfolio card">{description}</p>
-      <ReadMore className="mb-3" text="Mais Detalhes" slug={slug} />
+      <Link rel="noopener" className="text-gray-700 dark:text-white font-semibold" href={`portfolio/${slug}`}>
+        <ReadMore className="mb-3 [&>svg]:hover:fill-primary-light hover:text-primary-light" text="Mais Detalhes" />
+      </Link>
     </>
   )
 }
