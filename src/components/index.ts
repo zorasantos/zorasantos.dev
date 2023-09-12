@@ -7,6 +7,7 @@ import PostDetails from "./PostDetails"
 import PreviewPostCard from "./PreviewPostCard"
 import PostCard from "./PostCard"
 import PortfolioCard from "./PortfolioCard"
+import ReadMore from "./ReadMore"
 import Code from "./Code"
 import Tags from "./Tags"
 import ChipTag from "./ChipTag"
@@ -23,5 +24,6 @@ export {
   ThemeSwitcher,
   ChipTag,
   PortfolioCard,
-  PreviewPostCard
+  PreviewPostCard,
+  ReadMore
  }

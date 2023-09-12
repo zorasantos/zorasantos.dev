@@ -1,7 +1,7 @@
 import Image from "next/image";
 import photo_author from "@/assets/perfil.jpeg"
 
-interface PostDetailsProps {
+type PostDetailsProps = {
   author: string;
   title: string;
   description: string;

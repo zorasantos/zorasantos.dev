@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-interface IMetaProps {
+type IMetaProps = {
   title: string;
   description: string;
 }

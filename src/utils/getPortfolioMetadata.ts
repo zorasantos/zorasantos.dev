@@ -1,7 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 
-interface PortfolioMetadata {
+type PortfolioMetadata = {
   title: string;
   description: string;
   slug: string;
