@@ -9,18 +9,19 @@ describe('Footer Component', () => {
     const gitHubIcon = screen.getAllByRole("img", { name: "Github Icon" })
     const youtubeIcon = screen.getAllByRole("img", { name: "Youtube Icon" })
 
+
     const linkLinkedin = screen.getAllByRole("link", { name: "Linkedin Icon" })
     const linkGithub = screen.getAllByRole("link", { name: "Github Icon" })
     const linkYoutube = screen.getAllByRole("link", { name: "Youtube Icon" })
 
     expect(linkedinIcon).toBeDefined()
-    expect(linkedinIcon[0].getAttribute('alt')).toBe('Linkedin Icon')
+    expect(linkedinIcon[0].getAttribute('aria-label')).toBe('Linkedin Icon')
 
     expect(gitHubIcon).toBeDefined()
-    expect(gitHubIcon[0].getAttribute('alt')).toBe('Github Icon')
+    expect(gitHubIcon[0].getAttribute('aria-label')).toBe('Github Icon')
 
     expect(youtubeIcon).toBeDefined()
-    expect(youtubeIcon[0].getAttribute('alt')).toBe('Youtube Icon')
+    expect(youtubeIcon[0].getAttribute('aria-label')).toBe('Youtube Icon')
 
     expect(linkLinkedin[0].getAttribute('href')).toBe('https://www.linkedin.com/in/zoranildosantos/')
     expect(linkGithub[0].getAttribute('href')).toBe('https://github.com/ZoraSantos')
