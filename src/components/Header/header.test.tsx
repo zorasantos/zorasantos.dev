@@ -12,8 +12,7 @@ describe("Header component", () => {
   test("Should be able renders the header correctly", () => {
     render(<Header />)
 
-    // const logo = screen.getAllByRole("img", { name: "logo" })
-    const logo = screen.getByLabelText("logo").getAttribute('aria-label')
+    const logo = screen.getAllByRole("img", { name: "logo" })
     const link = screen.getAllByRole("link", { name: "Sobre Mim" })
     const header = screen.getAllByRole("banner")
 
