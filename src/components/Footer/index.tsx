@@ -17,7 +17,7 @@ export default function Footer() {
             role="img"
             aria-label={item.altText}
             xmlns="http://www.w3.org/2000/svg"
-            className="fill-primary dark:fill-primary-dark h-8 w-8"
+            className="fill-primary dark:fill-primary-dark h-8 w-8 hover:scale-125 transition-all ease duration-200"
             viewBox={item.icon.viewBox}
             fill="none"
           >
